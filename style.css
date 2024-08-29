@@ -1,0 +1,17 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black
+}
+
+.lysfitteboksen {
+    height: 50px;
+    width: 50px;
+    background-color: grey;
+}
+
+#container {
+    text-align: center;
+    background-color: lightblue;
+}
