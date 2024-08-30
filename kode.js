@@ -1,29 +1,53 @@
-function skruPå() {
-    document.getElementById("lyspære").style.backgroundColor = 'yellow';
-}
-function skruAv() {
-    document.getElementById("lyspære").style.backgroundColor = 'grey';
-}
-let lysPærePå;
-let lysPæreAv;
-
-if (document.getElementById("lyspære").style.backgroundColor = 'yellow') {
-    lysPærePå = true
-    lysPæreAv = false
-}
-if (document.getElementById("lyspære").style.backgroundColor = 'grey') {
-    lysPærePå = false
-    lysPæreAv = true
-}
-
-
-if (lysPærePå = true) {
+// function skruPå() {
+//     document.getElementById("lyspære").style.backgroundColor = 'yellow';
+// }
+// function skruPå() {
+//     document.getElementById("tekst").innerHTML = /*HTML*/`
+//     <div id="tekst">Nå er lyset av!</div>`;
+//     document.getElementById("lyspære").style.backgroundColor = `yellow`;
+//     document.getElementById("buttons").innerHTML = /*HTML*/`
+//     <button id="lysbryter" onclick="skruAv()">Skru på</button>`;
+// }
+// function skruAv() {
+//     document.getElementById("tekst").innerHTML = /*HTML*/`
+//     <div id="tekst">Nå er lyset på!</div>`;
+//     document.getElementById("lyspære").style.backgroundColor = `grey`;
+//     document.getElementById("buttons").innerHTML = /*HTML*/`
+//     <button id="lysbryter" onclick="skruPå()">Skru på</button>`;
+// }
+function skruPå(text, color) {
+    document.getElementById("tekst").innerHTML = /*HTML*/`
+    <div id="tekst">${text}</div>`;
+    document.getElementById("lyspære").style.backgroundColor = `${color}`;
     document.getElementById("buttons").innerHTML = /*HTML*/`
-    <button id="lysbryter" onclick="skruAv()">Skru av</button>`;
-    document.getElementById("tekst").innerHTML = "Nå er lyspæra på!"
+     <button id="lysbryter" onclick="skruAv('Nå er lyset av!', 'grey')">Skru av</button>`;
 }
-if (lysPæreAv = true) {
+function skruAv(text, color) {
+    document.getElementById("tekst").innerHTML = /*HTML*/`
+    <div id="tekst">${text}</div>`;
+    document.getElementById("lyspære").style.backgroundColor = `${color}`;
     document.getElementById("buttons").innerHTML = /*HTML*/`
-        <button id="lysbryter" onclick="skruPå()">Skru på</button>`;
-    document.getElementById("tekst").innerHTML = "Nå er lyspæra av!"
+    <button id="lysbryter" onclick="skruPå('Nå er lyset på!', 'yellow')">Skru på</button>`;
 }
+// let lysPærePå;
+// let lysPæreAv;
+
+// if (document.getElementById("lyspære").style.backgroundColor = 'yellow') {
+//     lysPærePå = true
+//     lysPæreAv = false
+// }
+// if (document.getElementById("lyspære").style.backgroundColor = 'grey') {
+//     lysPærePå = false
+//     lysPæreAv = true
+// }
+
+
+// if (lysPærePå = true) {
+//     document.getElementById("buttons").innerHTML = /*HTML*/`
+//     <button id="lysbryter" onclick="skruAv()">Skru av</button>`;
+// }
+// if (lysPæreAv = true) {
+//     document.getElementById("buttons").innerHTML = /*HTML*/`
+//         <button id="lysbryter" onclick="skruPå()">Skru på</button>`;
+//     document.getElementById("tekst").innerHTML = "Nå er lyspæra av!"
+// }
