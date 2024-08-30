@@ -17,17 +17,31 @@
 // }
 function skruPå(text, color) {
     document.getElementById("tekst").innerHTML = /*HTML*/`
-    <div id="tekst">${text}</div>`;
-    document.getElementById("lyspære").style.backgroundColor = `${color}`;
+    <div id="tekst">${createTekstPå(text)}</div>`;
+    document.getElementById("lyspære").style.backgroundColor = `${createColorAv(color)}`;
     document.getElementById("buttons").innerHTML = /*HTML*/`
      <button id="lysbryter" onclick="skruAv('Nå er lyset av!', 'grey')">Skru av</button>`;
 }
 function skruAv(text, color) {
     document.getElementById("tekst").innerHTML = /*HTML*/`
-    <div id="tekst">${text}</div>`;
-    document.getElementById("lyspære").style.backgroundColor = `${color}`;
+    <div id="tekst">${createTekstAv(text)}</div>`;
+    document.getElementById("lyspære").style.backgroundColor = `${createColorPå(color)}`;
     document.getElementById("buttons").innerHTML = /*HTML*/`
     <button id="lysbryter" onclick="skruPå('Nå er lyset på!', 'yellow')">Skru på</button>`;
+}
+function createTekstAv(text) {
+    return document.getElementById("tekst").innerHTML = /*HTML*/`
+    <div id="tekst">${text}</div>`
+}
+function createTekstPå(text) {
+    return document.getElementById("tekst").innerHTML = /*HTML*/`
+    <div id="tekst">${text}</div>`
+}
+function createColorPå(color) {
+    return document.getElementById("lyspære").style.backgroundColor = `${color}`;
+}
+function createColorAv(color) {
+    return document.getElementById("lyspære").style.backgroundColor = `${color}`;
 }
 // let lysPærePå;
 // let lysPæreAv;
